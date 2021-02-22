@@ -1,6 +1,11 @@
+import { ExperienceBar } from './Components/ExperienceBar'
+import './styles/global.css'
+
 const App = () => {
   return (
-    <h1>Hello NLW</h1>
+    <div className="container">
+      <ExperienceBar />
+    </div>   
   );
 }
 
