@@ -31,10 +31,13 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
   const [level, setLevel] = React.useState(1);
   const [currentExperience, setCurrentExperience] = React.useState(0);
   const [challengesCompleted, setChallengesCompleted] = React.useState(0);
-
   const [activeChallenge, setActiveChallenge] = React.useState(null);
 
   const experienceToNextLevel = Math.pow((level + 1) * 4, 2);
+
+  React.useEffect(() => {
+    Notification.requestPermission();
+  }, []);
 
   const levelUp = () => {
     setLevel(level + 1);
@@ -45,6 +48,14 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
     const challenge = challeges[randomChallengeIndex];
 
     setActiveChallenge(challenge);
+
+    if (Notification.permission === 'granted') {
+      new Notification('Novo Desafio', {
+        body: `Valendo ${challenge.amount} xp!`,
+      });
+    }
+
+    new Audio('/notification.mp3').play();
   };
 
   const resetChallenge = () => {
