@@ -80,5 +80,14 @@
   color: var(--text);
   cursor: not-allowed;
 
-  border-bottom: 5px solid green;
+  border-bottom: 5px solid var(--green);
+}
+
+.countdownButton:disabled::after {
+  content: '';
+  height: 15px;
+  width: 15px;
+  background: url('../../../public/icons/check-circle-solid.svg') center center
+    no-repeat;
+  margin-left: 1rem;
 }
