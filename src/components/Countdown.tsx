@@ -8,7 +8,7 @@ export default function Countdown() {
   const contextData = React.useContext(ChallengesContext);
   const { startNewChallenge } = contextData;
 
-  const initialTime = 0.1 * 60;
+  const initialTime = 0.05 * 60;
 
   const [time, setTime] = React.useState(initialTime);
   const [isActive, setIsActive] = React.useState(false);
