@@ -8,6 +8,8 @@
 
 Sistema desenvolvido com base no conhecimento adiquirido durante a semana do evento **&lt;nlw/&gt;**.
 
+## :mortar_board: Developer
+
 _Paulo Victor Vieira Cunha_
 
 - [github](https://github.com/pv-cunha)
