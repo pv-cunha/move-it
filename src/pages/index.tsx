@@ -26,12 +26,20 @@ export default function Home(props: HomeProps) {
       currentExperience={currentExperience}
     >
       <div className={`${styles.container} animeLeft`}>
+        <div className={styles.header}>
+          <div>
+            <img src="/favicon.png" alt="" />
+            <h1>Move It</h1>
+          </div>
+          <h2>
+            <a href="https://github.com/pv-cunha">pv-cunha</a>
+            <img src="/icons/github.svg" alt="" />
+          </h2>
+        </div>
         <Head>
           <title>Início | Move It</title>
         </Head>
-
         <ExperienceBar />
-
         <CountdownProvider>
           <section>
             <div>

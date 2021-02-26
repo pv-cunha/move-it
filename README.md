@@ -13,3 +13,9 @@ Sistema desenvolvido com base no conhecimento adiquirido durante a semana do eve
 _Paulo Victor Vieira Cunha_
 
 - [github](https://github.com/pv-cunha)
+
+## Usage
+
+### `npm install`
+
+### `npm run dev`

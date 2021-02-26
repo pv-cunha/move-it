@@ -5,6 +5,7 @@
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
   border-radius: 5px;
   background: var(--background);
+  margin-bottom: 1rem;
 }
 
 .experienceBar span {

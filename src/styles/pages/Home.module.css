@@ -2,7 +2,7 @@
   height: 100vh;
   max-width: 62rem;
   margin: 0 auto;
-  padding: 2.5rem 2rem;
+  padding: 0 2rem 2.5rem 2rem;
   display: flex;
   flex-direction: column;
 }
@@ -14,4 +14,40 @@
   grid-template-columns: 1fr 1fr;
   gap: 6.25rem;
   align-content: center;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 1rem;
+}
+
+.header div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header div img {
+  height: 50px;
+  margin-right: 1rem;
+}
+
+.header h2 img {
+  margin-left: 1rem;
+
+  height: 17px;
+  width: 17px;
+}
+
+.header h2 {
+  border: 1px solid transparent;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+.header h2:hover {
+  border-color: var(--gray-line);
 }
