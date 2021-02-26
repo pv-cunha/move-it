@@ -2,7 +2,7 @@
   height: 100vh;
   max-width: 62rem;
   margin: 0 auto;
-  padding: 0 2rem 2.5rem 2rem;
+  padding: 2.5rem 2rem 2.5rem 2rem;
   display: flex;
   flex-direction: column;
 }
@@ -21,7 +21,11 @@
   align-items: center;
   justify-content: space-between;
 
-  padding: 1rem;
+  margin-top: -2rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--gray-line);
+
+  padding: 0.5rem 0;
 }
 
 .header div {
@@ -46,8 +50,11 @@
   border: 1px solid transparent;
   border-radius: 5px;
   padding: 0.5rem;
+  transform: scale(0.9);
+  transition: transform 0.3s ease-in;
 }
 
 .header h2:hover {
   border-color: var(--gray-line);
+  transform: scale(1);
 }
