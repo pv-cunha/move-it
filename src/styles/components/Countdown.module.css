@@ -14,7 +14,7 @@
   align-items: center;
   justify-content: space-evenly;
 
-  background: var(--white);
+  background: #eee;
   box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
   border-radius: 5px;
   font-size: 8.5rem;
@@ -26,11 +26,11 @@
 }
 
 .countdownContainer > div span:first-child {
-  border-right: 1px solid #f0f1f3;
+  border-right: 1px solid var(--gray-line);
 }
 
 .countdownContainer > div span:last-child {
-  border-left: 1px solid #f0f1f3;
+  border-left: 1px solid var(--gray-line);
 }
 
 .countdownContainer > span {
@@ -56,27 +56,39 @@
   font-size: 1.25rem;
   font-weight: 600;
 
-  transition: all 0.2s;
-}
-
-.countdownButton:not(:disabled):hover {
-  background: var(--blue-dark);
+  position: relative;
+  overflow: hidden;
 }
 
 .countdownButtonActive {
   background: var(--white);
   color: var(--title);
+
+  transition: width 1s linear;
 }
 
-.countdownButtonActive:not(:disabled):hover,
-.countdownButtonActive:not(:disabled):focus {
-  background: var(--red);
-  color: var(--white);
+.countdownButtonActive:hover,
+.countdownButtonActive:focus {
   outline: none;
 }
 
+.countdownButtonProgressBar {
+  height: 5px;
+  width: 100%;
+  background: #eee;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.countdownButtonProgressBar > div {
+  height: 100%;
+  background: var(--green);
+  transition: width 1s linear;
+}
+
 .countdownButton:disabled {
-  background: var(--white);
+  background: #eee;
   color: var(--text);
   cursor: not-allowed;
 

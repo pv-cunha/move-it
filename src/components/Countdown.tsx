@@ -9,12 +9,17 @@ export default function Countdown() {
     seconds,
     isActive,
     hasFinished,
+    time,
+    initialTime,
     resetCountdown,
     startCountdown,
   } = countdownContextData;
 
   const [minuteLeft, minuteRight] = String(minutes).padStart(2, '0').split('');
   const [secondLeft, secondRight] = String(seconds).padStart(2, '0').split('');
+
+  const progressBarPercentage = 100 - (time / initialTime) * 100;
+  console.log(100 - (time / initialTime) * 100);
 
   return (
     <div>
@@ -43,6 +48,13 @@ export default function Countdown() {
               onClick={resetCountdown}
             >
               Abandonar ciclo
+              <div className={styles.countdownButtonProgressBar}>
+                <div
+                  style={{
+                    width: `${progressBarPercentage}%`,
+                  }}
+                ></div>
+              </div>
             </button>
           ) : (
             <button

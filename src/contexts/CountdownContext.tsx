@@ -2,6 +2,8 @@ import React from 'react';
 import { ChallengesContext } from './ChallengeContexts';
 
 interface CountdownContextData {
+  time: number;
+  initialTime: number;
   minutes: number;
   seconds: number;
   isActive: boolean;
@@ -63,6 +65,8 @@ export function CountdownProvider({ children }: CountdownProviderProps) {
         hasFinished,
         startCountdown,
         resetCountdown,
+        time,
+        initialTime,
       }}
     >
       {children}
